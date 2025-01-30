@@ -1,40 +1,17 @@
 using System;
 
-class Program
+class HandshakeCalculator
 {
-    static void Main(string [] args)
+    static void Main(string[] args)
     {
-        // Take user input for the number
-        Console.WriteLine("Enter a positive integer:");
-        int number = Convert.ToInt32(Console.ReadLine());
-        if (number <= 0)
+        Console.Write("Enter the number of students: ");
+        int numberOfStudents = Convert.ToInt32(Console.ReadLine());
+        if (numberOfStudents < 2)
         {
-            Console.WriteLine("Please enter a positive integer.");
+            Console.WriteLine("At least two students are required for handshakes.");
             return;
         }
-        string[] results = new string[number + 1];
-        for (int i = 0; i <= number; i++)
-        {
-            if (i % 3 == 0 && i % 5 == 0)
-            {
-                results[i] = "FizzBuzz";
-            }
-            else if (i % 3 == 0)
-            {
-                results[i] = "Fizz";
-            }
-            else if (i % 5 == 0)
-            {
-                results[i] = "Buzz";
-            }
-            else
-            {
-                results[i] = i.ToString(); // Store the number itself
-            }
-        }
-        for (int i = 0; i <= number; i++)
-        {
-            Console.WriteLine("Position " + i + " = " + results[i]);
-        }
+        int handshakes = (numberOfStudents * (numberOfStudents - 1)) / 2;
+        Console.WriteLine("The maximum number of handshakes among " + numberOfStudents + " students is: " + handshakes);
     }
 }
