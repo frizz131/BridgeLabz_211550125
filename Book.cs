@@ -4,53 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment_2_2_2025
+namespace LibraryManagementSystem
 {
     public class Book
     {
-        public string ISBN { get; set; }
+        public static string LibraryName = "GLAU Central Library";
+        public readonly string ISBN;
 
-        protected string Title { get; set; }
+        private string title;
+        private string author;
 
-        private string Author;
 
-        public Book(string isbn, string title, string author)
+        public Book(string title, string author, string isbn)
         {
-            ISBN = isbn;
-            Title = title;
-            Author = author;
+            this.title = title;
+            this.author = author;
+            this.ISBN = isbn;
         }
 
-        public void SetAuthor(string author)
+        public static void DisplayLibraryName()
         {
-            Author = author;
+            Console.WriteLine($"Library Name: {LibraryName}");
         }
 
-        public string GetAuthor()
+        public string GetBookDetails()
         {
-            return Author;
+            return $"Title: {title}\nAuthor: {author}\nISBN: {ISBN}";
         }
 
-        public virtual void DisplayDetails()
+        public static void DisplayBookDetails(object obj)
         {
-            Console.WriteLine($"ISBN: {ISBN}, Title: {Title}, Author: {Author}");
-        }
-
-    }
-
-    public class EBook : Book
-    {
-        private double FileSize; // File size in MB
-
-        public EBook(string isbn, string title, string author, double fileSize)
-            : base(isbn, title, author) // Call base class constructor
-        {
-            FileSize = fileSize;
-        }
-
-        public override void DisplayDetails()
-        {
-            Console.WriteLine($"ISBN: {ISBN}, Title: {Title}, File Size: {FileSize}MB, Author: {GetAuthor()}");
+            if (obj is Book book)
+            {
+                Console.WriteLine(book.GetBookDetails());
+            }
+            else
+            {
+                Console.WriteLine("The object is not a Book.");
+            }
         }
     }
 }

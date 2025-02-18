@@ -1,82 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment_2_2_2025
+namespace EmployeeManagementSystem
 {
     public class Employee
     {
-        public int EmployeeID { get; set; }
+        public static string CompanyName = "Capgemini";
+        private static int totalEmployees = 0;
 
-        protected string Department { get; set; }
+        public readonly int Id;
+        private string name;
+        private string designation;
 
-        private double Salary;
-
-        public Employee(int employeeID, string department, double salary)
+        public Employee(string name, int id, string designation)
         {
-            EmployeeID = employeeID;
-            Department = department;
-            Salary = salary;
+            this.name = name;
+            this.Id = id;
+            this.designation = designation;
+            totalEmployees++;
         }
 
-        public void SetSalary(double newSalary)
+        public static void DisplayTotalEmployees()
         {
-            if (newSalary > 0)
+            Console.WriteLine($"Total Employees: {totalEmployees}");
+        }
+
+        // Method to get employee details
+        public string GetEmployeeDetails()
+        {
+            return $"ID: {Id}\nName: {name}\nDesignation: {designation}";
+        }
+        public static void DisplayEmployeeDetails(object obj)
+        {
+            if (obj is Employee emp)
             {
-                Salary = newSalary;
-                Console.WriteLine($"Salary updated to {Salary}");
+                Console.WriteLine(emp.GetEmployeeDetails());
             }
             else
             {
-                Console.WriteLine("Invalid salary amount.");
+                Console.WriteLine("The object is not an Employee.");
             }
-        }
-        public double GetSalary()
-        {
-            return Salary;
-        }
-
-        public virtual void DisplayDetails()
-        {
-            Console.WriteLine($"Employee ID: {EmployeeID}, Department: {Department}, Salary: {Salary}");
-        }
-
-    }
-
-    public class Manager : Employee
-    {
-        private string role; 
-
-
-        public Manager(int employeeID, string department, double salary, string role)
-            : base(employeeID, department, salary)
-        {
-            SetRole(role);
-        }
-
-        public void SetRole(string newRole)
-        {
-            if (!string.IsNullOrWhiteSpace(newRole))
-            {
-                role = newRole;
-            }
-            else
-            {
-                Console.WriteLine("Invalid role.");
-            }
-        }
-
-        public string GetRole()
-        {
-            return role;
-        }
-
-        public override void DisplayDetails()
-        {
-            Console.WriteLine($"Employee ID: {EmployeeID}, Department: {Department}, Role: {role}, Salary: {GetSalary()}");
         }
     }
 }
