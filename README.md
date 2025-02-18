@@ -1,1 +1,164 @@
 # BridgeLabz_211550125
+# feature-22-1-25
+Introduction to C# C# is just a simple, secure, robust, portable, platform-independent, architectural neutral, multithreaded, object-oriented programming language with a strong type exception handling mechanism for developing different kinds of applications such as Web, Windows Form, Console, Web Services, Mobile Apps, etc.C# was created by Microsoft in the early 2000s as part of its .NET initiative.
+
+## Abstraction from Hardware:
+ 1. C# abstracts away the details of the computer's hardware, making it easier to write and understand code.
+ 2. Platform Independence: C# programs are compiled into Intermediate Language (IL) and run on any device with the .NET runtime (CLR), adhering to the "Write Once, Run Anywhere" principle.
+ 3. Advanced Features: C# provides extensive libraries and frameworks for various tasks, supports object-oriented programming, and handles memory management with automatic garbage collection.
+ 4. Ease of Use: C# has a human-readable syntax, strong error-checking, and powerful development tools that enhance productivity and simplify complex tasks.
+
+## Operators:
+- Arithmetic Operator : + , - , * / , %;
+- Relational Operator : == ,!= <, >,<=,>=
+- Logical Operator : && ,||,!
+- Assignment Operator : +=,-=,/=,*=
+- Increment Operator : ++, --,
+- Bitiwse Operator : & , |, ^, ~,x<<1,x>>1
+# feature-23-1-25
+CLR :The Common Language Runtime (CLR) is a core component of .NET Framework that manages the execution and the lifecycle of all .NET applications (code). It provides various services, including automatic memory management, exception handling, security, and type safety. When a .NET application is compiled, it generates an intermediate language code called Common Intermediate Language (CIL). The CLR is responsible for translating this CIL into machine code and managing the execution of the resulting program. The CLR also provides a platform for interoperability between different programming languages that target the .NET Framework. This means that a program written in one .NET language can easily use libraries written in another .
+
+CIL is a low-level, platform-independent intermediate code used in the .NET framework. When you write and compile C# code, it gets converted into CIL by the C# compiler. This intermediate code is then executed by the Common Language Runtime (CLR).
+
+## Key Features:
+Platform-Independent: CIL allows .NET applications to run on multiple platforms by being compiled into machine code specific to the platform at runtime using the Just-In-Time (JIT) compiler.
+Type-Safe: CIL enforces type safety, ensuring reliable and secure execution. Language Interoperability: Any .NET-supported language (e.g., C#, VB.NET, F#) compiles into CIL, enabling cross-language compatibility. Managed Execution: It benefits from the CLR's features like garbage collection, exception handling, and runtime type checking.
+## Static:
+A static method is a method that belongs to the class itself, rather than to instances (objects) of the class. It is called on the class rather than on an object. Static methods are defined using the static keyword and can be invoked without creating an instance of the class. Belongs to the Class, Not the Instance: Static methods are called on the class itself, not on an instance. Cannot Access Instance Members: Static methods cannot access non-static instance variables or methods (those that belong to an object). They can only access other static members of the class. Can Be Called Directly: You don’t need to create an object to invoke a static method. It’s called directly on the class. No this Keyword: Static methods don’t have access to the this keyword (which refers to the current object in non-static methods).
+
+# feature-24-1-25
+The data type which stores the value directly in the memory is called the Value Data Type in C#. The examples are int, char, boolean, and float which store numbers, alphabets, true/false, and floating-point numbers respectively.
+
+## Primitive Value Types:
+Numeric Types:
+
+- int: 32-bit signed integer.
+- long: 64-bit signed integer.
+- short: 16-bit signed integer.
+- byte: 8-bit unsigned integer.
+- float: 32-bit floating-point (7 digits precision).
+- double: 64-bit floating-point (15-16 digits precision).
+- char: Single 16-bit Unicode character.
+- bool: Boolean values (true or false).
+## Access Modifiers
+1. public The code is accessible for all classes 
+2. private The code is only accessible within the same class
+3. protected The code is accessible within the same class, or in a class that is inherited from that class.
+4. internal The code is only accessible within its own assembly, but not from another assembly.
+5. protected internal: Only code in the same assembly or in a derived class in another assembly can access this type or member.
+6. private protected: Only code in the same assembly and in the same class or a derived class can access the type or member.
+## Type Conversion:
+Implicit Conversion
+Definition: Automatic type conversion performed by the compiler.
+Characteristics:
+- No data loss occurs during conversion.
+- Happens between compatible types.
+- Does not require explicit syntax.
+  
+Explicit Conversion (Type Casting) Definition: Conversion that requires explicit syntax because it might result in data loss or a runtime exception.
+
+Syntax: Use the cast operator (type).
+
+## Boxing:
+the process of converting a Value Type variable (char, int etc.) to a Reference Type variable (object) is called Boxing. Boxing is an implicit conversion process in which object type (super type) is used. Value type variables are generally stored on the stack when they are local variables. When they are fields within a reference type, they are part of the heap-allocated memory for the reference type.
+
+## Control Flow
+- for Loop: The for loop is used when you know the number of iterations in advance. It consists of three parts:
+- Initialization: Set up the loop counter.
+- Condition: The loop runs as long as this condition is true.
+- Increment/Decrement: Update the loop counter after each iteration.
+- while Loop The while loop runs as long as the condition is true. The condition is checked before each iteration.
+- do-while Loop The do-while loop is similar to the while loop, but it guarantees that the code is executed at least once because the condition is checked after the loop body.
+# Assignment of 25-01-2025 date is Done
+I have learned the following topics through this assignment:
+- C# Arrays
+- Create an Array
+- Access an Array
+- Accessing using for loop
+- Modifying an Array
+- Using length property of array
+- C# Multi-dimensional Array
+- C# 2 Dimensional Array (Matrix)
+- Accessing, finding size, etc., of Multi-Dimensional Array
+- Using C# Console.Error.WriteLine() Message and Environment.Exit() Method
+# Assignment of 28-01-2025 date is Done
+I have learned the following topics through this assignment:
+- User-Defined Methods
+- Using Methods Multiple Times
+- Making Methods More Dynamic
+- Recursive Methods
+- Static Methods in C#
+- .NET Standard Library Methods
+- System.Math Class in C#
+# Assignment of 30-01-2025 date is Done
+I have learned the following topics through this assignment:
+- The outcome is the usage of Strings
+- Handling strings and common string functions
+- Functions and function parameter passing, return the value of function
+- Use common Built-in Functions and build the logic
+# Assignment 31-01-2025 date is Done
+Solved more questions on strings and others for logic building purpose through this assignment:
+- Assignment of 31-1-2025 is done
+- I have learned the following topics through this assignment:
+- Procedural vs Object-oriented Programming Language
+- Class and Objects
+# Assignment of 2-2-2025 is done
+I have learned the following topics through this assignment:
+- C# Constructors
+- Instance vs. Class Variables
+- Access Modifiers Concepts
+# Assignment of 4-2-2025 is done
+I have learned the following topics through this assignment:
+- Usage of THIS keyword
+- Static data members
+- sealed keyword
+- IS OPERATOR
+# Assignment of 6-2-2025 is done
+I have learned the following topics through this assignment:
+- Object Oriented Design Principles
+- Class Diagram
+- Object Diagrams
+- Sequence Diagrams
+- HasARelationship vs IsARelationship
+- Association, Aggregation, Composition
+# Assignment of 08-02-2025 date is Done
+I have learned the following topics through this assignment:
+- Inheritance
+- Single Level Inheritance
+- Multilevel Inheritance
+- Hierarchical Inheritance
+- Key Features of Inheritance
+- Method Overriding
+- Constructor Inheritance in C#
+- Polymorphism and Inheritance
+- Access Modifiers and Inheritance
+# Assignment of 10-02-2025 date is Done
+I have learned the following topics through this assignment:
+- Encapsulation
+- Polymorphism
+- Interface
+- Abstract Classes
+# Assignment with Code 12-2-25 done:
+- Single Linked List
+- Double Linked List
+- Circular Linked List
+# Assignment with Code 13-2-25 done :
+- Stack
+- Queue
+- HashMap(known as Dictionary)
+- Hash Function
+# Assignment with code 14-2-25 done:
+- Bubble Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+# Assignment with code 16-2-25
+- StringBuilder
+- StringBuffer
+- FileReader
+- InputStreamReader
+- Linear Search
+- Binary Search
+# Assignment with code 17-2-25
+- General Algorithm Best Practices
+- Time and space Complexity Optimization
